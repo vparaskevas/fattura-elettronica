@@ -7,7 +7,6 @@
     "git.autofetch": true,
     "editor.formatOnSave": true,
     "javascript.format.enable": false,
-    "prettier.eslintIntegration": true,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
     "prettier.tabWidth": 4,
