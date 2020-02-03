@@ -1,5 +1,6 @@
 import builder from 'xmlbuilder';
 import { FatturaElettronica } from './FatturaElettronica';
+import { FatturaElettronicaSemplificata } from './FatturaElettronicaSemplificata';
 import { CausalePagamento } from './Tabelle/CausalePagamento';
 import { CondizioniPagamento } from './Tabelle/CondizioniPagamento';
 import { Divisa } from './Tabelle/Divisa';
@@ -61,9 +62,12 @@ export const WriteXml = ({ FatturaElettronicaHeader, FatturaElettronicaBody }: F
     return xmlString;
 };
 
-export const WriteSimplifiedXml = ({ FatturaElettronicaHeader, FatturaElettronicaBody }: FatturaElettronica): any => {
+export const WriteSimplifiedXml = ({
+    FatturaElettronicaHeader,
+    FatturaElettronicaBody,
+}: FatturaElettronicaSemplificata): any => {
     const xmlObject: any = {
-        'p:FatturaElettronica': {
+        'p:FatturaElettronicaSemplificata': {
             '@versione': 'FSM10',
             '@xmlns:ds': 'http://www.w3.org/2000/09/xmldsig#',
             '@xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
