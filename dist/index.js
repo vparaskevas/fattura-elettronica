@@ -63,12 +63,12 @@ exports.WriteXml = ({ FatturaElettronicaHeader, FatturaElettronicaBody }) => {
 };
 exports.WriteSimplifiedXml = ({ FatturaElettronicaHeader, FatturaElettronicaBody, }) => {
     const xmlObject = {
-        FatturaElettronicaSemplificata: {
+        'ns2:FatturaElettronicaSemplificata': {
             '@versione': 'FSM10',
             '@xmlns:ds': 'http://www.w3.org/2000/09/xmldsig#',
             '@xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
             '@xsi:schemaLocation': 'http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.0',
-            '@xmlns:p': 'http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.0',
+            '@xmlns:ns2': 'http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.0',
             FatturaElettronicaHeader,
             FatturaElettronicaBody,
         },
